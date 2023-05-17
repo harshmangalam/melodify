@@ -29,22 +29,56 @@ export const Sidebar = component$(() => {
       </ul>
 
       <div class="flex-1 bg-base rounded-lg">
-        <header class="py-2 px-4 flex items-center gap-2 text-[#a7a7a7]">
-          <button class="flex items-center gap-3 font-bold hover:text-white py-1 px-2">
-            <span>
-              <LibraryOutlineIcon />
-            </span>
-            <span>Your Library</span>
-          </button>
-          <div class="flex-1 flex justify-end">
-            <button class="p-2 hover:text-white ">
-              <PlusIcon />
+        <div>
+          <header class="py-2 px-4 flex items-center gap-2 text-[#a7a7a7]">
+            <button class="flex items-center gap-3 font-bold hover:text-white py-1 px-2">
+              <span>
+                <LibraryOutlineIcon />
+              </span>
+              <span>Your Library</span>
             </button>
+            <div class="flex-1 flex justify-end">
+              <button class="p-2 hover:text-white ">
+                <PlusIcon />
+              </button>
+            </div>
+            <button class="p-2 hover:text-white">
+              <ArrowRightIcon />
+            </button>
+          </header>
+
+          <div class="my-2 mx-4 ">
+            <div class="scroll-smooth flex items-center overflow-x-scroll">
+              <button
+                role="checkbox"
+                class="scroll-me-2 mr-2 rounded-full px-3 py-1 bg-tinted-base"
+              >
+                <span class="text-sm font-normal text-white">Playlists</span>
+              </button>
+              <button
+                role="checkbox"
+                class="scroll-me-2 mr-2 rounded-full px-3 py-1 bg-tinted-base"
+              >
+                <span class="text-sm font-normal text-white">Artists</span>
+              </button>
+
+              <button
+                role="checkbox"
+                class="scroll-me-2 mr-2 rounded-full px-3 py-1 bg-tinted-base"
+              >
+                <span class="text-sm font-normal text-white">Albums</span>
+              </button>
+              <button
+                role="checkbox"
+                class="scroll-me-2 mr-2 rounded-full px-3 py-1 bg-tinted-base"
+              >
+                <span class="text-sm font-normal text-white whitespace-nowrap">
+                  Podcasts & Shows
+                </span>
+              </button>
+            </div>
           </div>
-          <button class="p-2 hover:text-white">
-            <ArrowRightIcon />
-          </button>
-        </header>
+        </div>
       </div>
     </aside>
   );

@@ -1,12 +1,12 @@
 import { Slot, component$ } from "@builder.io/qwik";
 
-export const IconContainer = component$(() => (
+export const IconContainer = component$(({ size = 24 }: { size?: number }) => (
   <svg
     role="img"
-    height="24"
-    width="24"
+    height={size}
+    width={size}
     aria-hidden="true"
-    viewBox="0 0 24 24"
+    viewBox={`0 0 ${size} ${size}`}
     data-encore-id="icon"
   >
     <Slot />
