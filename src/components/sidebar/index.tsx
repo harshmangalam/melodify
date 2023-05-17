@@ -1,8 +1,10 @@
 import { component$ } from "@builder.io/qwik";
 import {
+  ArrowRightIcon,
   HomeFilledIcon,
   HomeOutlineIcon,
   LibraryOutlineIcon,
+  PlusIcon,
   SearchFilledIcon,
   SearchOutlineIcon,
 } from "~/icons";
@@ -33,6 +35,14 @@ export const Sidebar = component$(() => {
               <LibraryOutlineIcon />
             </span>
             <span>Your Library</span>
+          </button>
+          <div class="flex-1 flex justify-end">
+            <button class="p-2 hover:text-white ">
+              <PlusIcon />
+            </button>
+          </div>
+          <button class="p-2 hover:text-white">
+            <ArrowRightIcon />
           </button>
         </header>
       </div>
