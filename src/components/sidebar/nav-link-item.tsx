@@ -1,11 +1,11 @@
-import { component$ } from "@builder.io/qwik";
+import { type Component, component$ } from "@builder.io/qwik";
 import { Link, useLocation } from "@builder.io/qwik-city";
 
 interface NavLinkItemProps {
   name: string;
-  icon: any;
+  icon: Component<{}>;
   href: string;
-  activeIcon: any;
+  activeIcon: Component<{}>;
 }
 export const NavLinkItem = component$((props: NavLinkItemProps) => {
   const { name, icon: Icon, href, activeIcon: ActiveIcon } = props;
