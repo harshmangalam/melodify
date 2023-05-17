@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor:{
-        "base":"#121212"
+        "base":"#121212",
+        "tinted-base":"hsla(0,0%,100%,.07)"
       }
     },
   },
