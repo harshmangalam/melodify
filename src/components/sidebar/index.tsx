@@ -13,7 +13,7 @@ import { LibraryItem } from "./library-item";
 
 export const Sidebar = component$(() => {
   return (
-    <aside class="col-span-5 md:col-span-4 lg:col-span-3 row-span-5 h-full flex flex-col gap-2">
+    <aside class="col-span-5 md:col-span-5 lg:col-span-4 xl:col-span-3 row-span-5 h-full flex flex-col gap-2">
       <ul class="py-2 px-3 bg-base rounded-lg">
         <NavLinkItem
           href="/"
@@ -36,7 +36,7 @@ export const Sidebar = component$(() => {
               <span>
                 <LibraryOutlineIcon />
               </span>
-              <span>Your Library</span>
+              <span class="hidden md:block">Your Library</span>
             </button>
             <div class="flex-1 flex justify-end">
               <button class="p-2 hover:text-white ">
