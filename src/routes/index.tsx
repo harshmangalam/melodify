@@ -1,5 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import { LibraryItem } from "./library-item";
+import { Link } from "@builder.io/qwik-city";
+import { PlaylistCard } from "~/components/playlist/playlist-card";
 
 export default component$(() => {
   return (
@@ -40,6 +42,32 @@ export default component$(() => {
             title="Ankit Tiwari"
           />
         </ul>
+
+        <section>
+          <div class="mb-4 flex items-center gap-2 justify-between">
+            <h2 class="text-2xl font-bold text-white flex-1">India`s Best</h2>
+            <Link
+              href="/"
+              class="text-[#b3b3b3] text-sm font-bold hover:underline"
+            >
+              Show all
+            </Link>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <PlaylistCard />
+            <PlaylistCard />
+            <PlaylistCard />
+            <PlaylistCard />
+            <PlaylistCard />
+            <PlaylistCard />
+            <PlaylistCard />
+            <PlaylistCard />
+            <PlaylistCard />
+            <PlaylistCard />
+            <PlaylistCard />
+            <PlaylistCard />
+          </div>
+        </section>
       </div>
     </div>
   );

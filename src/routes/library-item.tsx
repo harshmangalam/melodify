@@ -1,7 +1,6 @@
 import { $, component$, useOn, useSignal } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
-import { PauseIcon } from "~/icons/pause";
-import { PlayIcon } from "~/icons/play";
+import { PlayPauseButton } from "~/components/play-pause-button";
 
 interface LibraryItemProps {
   avatarSrc: string;
@@ -11,7 +10,6 @@ interface LibraryItemProps {
 export const LibraryItem = component$((props: LibraryItemProps) => {
   const { avatarSrc, href, title } = props;
   const showAction = useSignal(false);
-  const play = useSignal(false);
 
   useOn(
     "mouseenter",
@@ -38,12 +36,7 @@ export const LibraryItem = component$((props: LibraryItemProps) => {
       </Link>
 
       <div hidden={!showAction.value} class="px-4">
-        <button
-          class="bg-green-base hover:bg-green-base-highlight rounded-full w-12 h-12 text-black grid place-items-center transition duration-300 hover:scale-105"
-          onClick$={() => (play.value = !play.value)}
-        >
-          {play.value ? <PauseIcon /> : <PlayIcon />}
-        </button>
+        <PlayPauseButton />
       </div>
     </li>
   );
