@@ -13,7 +13,7 @@ import { LibraryItem } from "./library-item";
 
 export const Sidebar = component$(() => {
   return (
-    <aside class="col-span-3 row-span-5 h-full flex flex-col gap-2">
+    <aside class="col-span-5 md:col-span-4 lg:col-span-3 row-span-5 h-full flex flex-col gap-2">
       <ul class="py-2 px-3 bg-base rounded-lg">
         <NavLinkItem
           href="/"
