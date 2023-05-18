@@ -9,6 +9,7 @@ import {
   SearchOutlineIcon,
 } from "~/icons";
 import { NavLinkItem } from "./nav-link-item";
+import { LibraryItem } from "./library-item";
 
 export const Sidebar = component$(() => {
   return (
@@ -28,7 +29,7 @@ export const Sidebar = component$(() => {
         />
       </ul>
 
-      <div class="flex-1 bg-base rounded-lg">
+      <div class="flex-1 bg-base rounded-lg flex flex-col h-full">
         <div>
           <header class="py-2 px-4 flex items-center gap-2 text-[#a7a7a7]">
             <button class="flex items-center gap-3 font-bold hover:text-white py-1 px-2">
@@ -79,6 +80,15 @@ export const Sidebar = component$(() => {
             </div>
           </div>
         </div>
+
+        <ul class="flex-1 my-2 mx-2">
+          <LibraryItem
+            title="Liked Songs"
+            subtitle="Playlist • 17 songs"
+            avatarSrc="https://misc.scdn.co/liked-songs/liked-songs-640.png"
+            href="/collection/tracks"
+          />
+        </ul>
       </div>
     </aside>
   );
