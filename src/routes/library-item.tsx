@@ -20,7 +20,7 @@ export const LibraryItem = component$((props: LibraryItemProps) => {
     $(() => (showAction.value = false))
   );
   return (
-    <li class="bg-[hsla(0,0%,100%,.1)] rounded h-16 transition duration-300 hover:bg-[hsla(0,0%,100%,.2)] flex items-center gap-4">
+    <li class="bg-[hsla(0,0%,100%,.1)] rounded h-16 transition duration-300 hover:bg-[hsla(0,0%,100%,.2)] flex items-center gap-4 relative">
       <img
         width={64}
         height={64}
@@ -35,7 +35,10 @@ export const LibraryItem = component$((props: LibraryItemProps) => {
         {title}
       </Link>
 
-      <div hidden={!showAction.value} class="px-4">
+      <div
+        hidden={!showAction.value}
+        class="absolute top-1/2 right-2 -translate-y-1/2"
+      >
         <PlayPauseButton />
       </div>
     </li>

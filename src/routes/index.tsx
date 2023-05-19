@@ -10,7 +10,7 @@ export default component$(() => {
         Good evening
       </h2>
       <div class="flex flex-col space-y-6">
-        <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-3 gap-x-6">
+        <ul class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-3 gap-x-6">
           <LibraryItem
             avatarSrc="https://misc.scdn.co/liked-songs/liked-songs-640.png"
             href="/collection/tracks"
