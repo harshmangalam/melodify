@@ -1,4 +1,5 @@
 import { Slot, component$ } from "@builder.io/qwik";
+import { Footer } from "~/components/footer";
 import { Sidebar } from "~/components/sidebar";
 
 export default component$(() => {
@@ -9,7 +10,7 @@ export default component$(() => {
         <div class="col-span-7 md:col-span-7 lg:col-span-8 xl:col-span-9 row-span-5 bg-base relative rounded-lg overflow-y-auto">
           <Slot />
         </div>
-        <div class="bg-pink-500 col-span-12"></div>
+        <Footer />
       </div>
     </div>
   );
