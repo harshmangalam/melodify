@@ -1,10 +1,10 @@
 import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
-import { HeartFilledIcon } from "~/icons/heart";
+import { HeartOutlineIcon } from "~/icons/heart";
 
 export const Footer = component$(() => {
   return (
-    <footer class="col-span-12 flex items-center justify-between px-4 max-w-[30%] w-full">
+    <footer class="col-span-12 flex items-center justify-between px-4 max-w-[25%] w-full">
       <div class="flex items-center gap-4">
         <div>
           <img
@@ -31,12 +31,16 @@ export const Footer = component$(() => {
             <span>
               <Link href="/">Kumar Sanu</Link>
             </span>
+            {", "}
+            <span>
+              <Link href="/">Kumar Sanu</Link>
+            </span>
           </div>
         </div>
 
         <div>
-          <button class="text-[#1ed760]">
-            <HeartFilledIcon />
+          <button class="text-subdude hover:text-white transition duration-300">
+            <HeartOutlineIcon />
           </button>
         </div>
       </div>
