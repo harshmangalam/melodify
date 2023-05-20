@@ -1,6 +1,5 @@
 import { component$, useSignal } from "@builder.io/qwik";
-import { PauseIcon } from "~/icons/pause";
-import { PlayIcon } from "~/icons/play";
+import { PauseIcon, PlayIcon } from "~/icons";
 
 export const PlayPauseButton = component$(
   ({

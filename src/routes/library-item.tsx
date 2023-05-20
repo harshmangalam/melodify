@@ -1,6 +1,6 @@
 import { $, component$, useOn, useSignal } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
-import { PlayPauseButton } from "~/components/play-pause-button";
+import { PlayPauseButton } from "~/components/player/play-pause-button";
 
 interface LibraryItemProps {
   avatarSrc: string;

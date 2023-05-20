@@ -1,10 +1,5 @@
 import { $, component$, useSignal } from "@builder.io/qwik";
-import {
-  Volume0Icon,
-  Volume1Icon,
-  Volume2Icon,
-  Volume3Icon,
-} from "~/icons/volume";
+import { Volume0Icon, Volume1Icon, Volume2Icon, Volume3Icon } from "~/icons";
 
 export const Volume = component$(() => {
   const level = useSignal("0");

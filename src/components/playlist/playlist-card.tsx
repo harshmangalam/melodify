@@ -1,5 +1,5 @@
 import { $, component$, useOn, useSignal } from "@builder.io/qwik";
-import { PlayPauseButton } from "../play-pause-button";
+import { PlayPauseButton } from "../player/play-pause-button";
 import { Link } from "@builder.io/qwik-city";
 
 export const PlaylistCard = component$(() => {

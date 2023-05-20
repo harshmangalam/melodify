@@ -1,9 +1,9 @@
 import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 import { HeartOutlineIcon } from "~/icons/heart";
-import { PlayPauseButton } from "../play-pause-button";
 import { Volume } from "../player/volume";
 import { QueueIcon } from "~/icons";
+import { AudioControl } from "../player/audio-control";
 
 export const Footer = component$(() => {
   return (
@@ -47,9 +47,7 @@ export const Footer = component$(() => {
         </div>
       </div>
       <div class="w-[45%]  mx-auto h-full flex flex-col justify-center space-y-2">
-        <div class="flex items-center gap-4 justify-center">
-          <PlayPauseButton size="md" bg="white" />
-        </div>
+        <AudioControl />
       </div>
       <div class="w-[30%]  h-full flex items-center justify-end">
         <div class="flex items-center gap-4 text-subdude">
