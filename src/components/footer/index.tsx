@@ -2,6 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 import { HeartOutlineIcon } from "~/icons/heart";
 import { PlayPauseButton } from "../play-pause-button";
+import { Volume } from "../player/volume";
 
 export const Footer = component$(() => {
   return (
@@ -49,7 +50,9 @@ export const Footer = component$(() => {
           <PlayPauseButton size="md" bg="white" />
         </div>
       </div>
-      <div class="w-[30%] bg-purple-500 mx-auto h-full"></div>
+      <div class="w-[30%]  h-full flex items-center justify-end">
+        <Volume />
+      </div>
     </footer>
   );
 });
