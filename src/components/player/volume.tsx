@@ -33,6 +33,7 @@ export const Volume = component$(() => {
         name="volume"
         min="0"
         max="100"
+        class="bg-red-500"
       />
     </div>
   );

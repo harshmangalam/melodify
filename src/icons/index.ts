@@ -6,3 +6,5 @@ export * from "./play";
 export * from "./pause";
 export * from "./arrow";
 export * from "./heart";
+export * from "./volume";
+export * from "./queue";
