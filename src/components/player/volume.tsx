@@ -18,13 +18,15 @@ export const Volume = component$(() => {
 
   return (
     <div class="flex items-center gap-2">
-      <label for="volume" class="w-4 h-4">
-        <button onClick$={handleVolumeIconPress}>
-          {+level.value === 0 && <Volume0Icon />}
-          {+level.value > 0 && +level.value <= 33 && <Volume1Icon />}
-          {+level.value > 33 && +level.value <= 66 && <Volume2Icon />}
-          {+level.value > 66 && +level.value <= 100 && <Volume3Icon />}
-        </button>
+      <label
+        for="volume"
+        onClick$={handleVolumeIconPress}
+        class="hover:text-white cursor-pointer"
+      >
+        {+level.value === 0 && <Volume0Icon />}
+        {+level.value > 0 && +level.value <= 33 && <Volume1Icon />}
+        {+level.value > 33 && +level.value <= 66 && <Volume2Icon />}
+        {+level.value > 66 && +level.value <= 100 && <Volume3Icon />}
       </label>
       <input
         bind:value={level}
@@ -33,7 +35,7 @@ export const Volume = component$(() => {
         name="volume"
         min="0"
         max="100"
-        class="bg-red-500"
+        class="bg-red-500 h-1"
       />
     </div>
   );

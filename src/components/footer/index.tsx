@@ -3,6 +3,7 @@ import { Link } from "@builder.io/qwik-city";
 import { HeartOutlineIcon } from "~/icons/heart";
 import { PlayPauseButton } from "../play-pause-button";
 import { Volume } from "../player/volume";
+import { QueueIcon } from "~/icons";
 
 export const Footer = component$(() => {
   return (
@@ -51,7 +52,12 @@ export const Footer = component$(() => {
         </div>
       </div>
       <div class="w-[30%]  h-full flex items-center justify-end">
-        <Volume />
+        <div class="flex items-center gap-4 text-subdude">
+          <Link href="/queue" class="hover:text-white">
+            <QueueIcon />
+          </Link>
+          <Volume />
+        </div>
       </div>
     </footer>
   );
