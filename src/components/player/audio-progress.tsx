@@ -5,9 +5,7 @@ export const AudioProgress = component$(() => {
     <div class="flex items-center gap-2 w-full">
       <span class="text-subdude text-xs font-normal">15:17</span>
 
-      <label for="progress" class="w-full">
-        <input type="range" name="progress" id="progress" class="h-3 w-full" />
-      </label>
+      <input type="range" name="progress" id="progress" class="h-2  w-full" />
 
       <span class="text-subdude text-xs font-normal">50:17</span>
     </div>
