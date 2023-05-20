@@ -29,8 +29,8 @@ export const Sidebar = component$(() => {
         />
       </ul>
 
-      <div class="flex-1 bg-base rounded-lg flex flex-col h-full">
-        <div>
+      <div class="flex-1 bg-base rounded-lg flex flex-col h-full overflow-y-auto">
+        <div class="sticky top-0 bg-base">
           <header class="py-2 px-4 flex items-center gap-2 text-[#a7a7a7]">
             <button class="flex items-center gap-3 font-bold hover:text-white py-1 px-2">
               <span>
@@ -81,7 +81,34 @@ export const Sidebar = component$(() => {
           </div>
         </div>
 
-        <ul class="flex-1 my-2 mx-2">
+        <ul class="flex-1 my-2 mx-2 h-full">
+          <LibraryItem
+            title="Liked Songs"
+            subtitle="Playlist • 17 songs"
+            avatarSrc="https://misc.scdn.co/liked-songs/liked-songs-640.png"
+            href="/collection/tracks"
+            isAccent={true}
+          />
+          <LibraryItem
+            title="Ankit Tiwari"
+            subtitle="Artist"
+            avatarSrc="https://i.scdn.co/image/ab6761610000a000e26e237ca6b143ca2074589a"
+            href="/artist/272vv32rr32"
+            avatarCircle={true}
+          />
+          <LibraryItem
+            title="Dj Chetas Radio"
+            subtitle="Playlist • Spotify"
+            avatarSrc="https://i.scdn.co/image/ab6761610000a000304b71d0a10604ec0cf314c6"
+            href="/playlist/272vv32rr32"
+            avatarCircle={true}
+          />
+          <LibraryItem
+            title="Kabir Singh"
+            subtitle="Album • Various Artists"
+            avatarSrc="https://i.scdn.co/image/ab67616d00001a9dc5545f737b16ad5ee767b62a"
+            href="/album/272vv32rr32"
+          />
           <LibraryItem
             title="Liked Songs"
             subtitle="Playlist • 17 songs"
