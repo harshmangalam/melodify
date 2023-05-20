@@ -46,7 +46,7 @@ export const Footer = component$(() => {
           </button>
         </div>
       </div>
-      <div class="w-[45%]  mx-auto h-full flex flex-col justify-center space-y-2">
+      <div class="w-[45%]  h-full flex flex-col justify-center space-y-2">
         <AudioControl />
       </div>
       <div class="w-[30%]  h-full flex items-center justify-end">

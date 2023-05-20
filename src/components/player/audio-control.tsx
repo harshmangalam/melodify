@@ -1,6 +1,11 @@
 import { component$ } from "@builder.io/qwik";
 import { PlayPauseButton } from "./play-pause-button";
-import { Skip15SecBackIcon, Skip15SecForwardIcon } from "~/icons";
+import {
+  NextIcon,
+  PreviousIcon,
+  Skip15SecBackIcon,
+  Skip15SecForwardIcon,
+} from "~/icons";
 
 export const AudioControl = component$(() => {
   return (
@@ -8,7 +13,13 @@ export const AudioControl = component$(() => {
       <button class="hover:text-white">
         <Skip15SecBackIcon />
       </button>
+      <button class="hover:text-white">
+        <PreviousIcon />
+      </button>
       <PlayPauseButton size="md" bg="white" />
+      <button class="hover:text-white">
+        <NextIcon />
+      </button>
       <button class="hover:text-white">
         <Skip15SecForwardIcon />
       </button>
