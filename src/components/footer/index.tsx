@@ -8,7 +8,7 @@ import { AudioControl } from "../player/audio-control";
 export const Footer = component$(() => {
   return (
     <footer class="col-span-12 flex items-center justify-between px-4 gap-4">
-      <div class="flex items-center gap-4 w-[25%]">
+      <div class="flex items-center gap-4 w-[30%]">
         <div>
           <img
             src="https://i.scdn.co/image/ab67616d0000485137f65266754703fd20d29854"
@@ -46,10 +46,8 @@ export const Footer = component$(() => {
           </button>
         </div>
       </div>
-      <div class="w-[45%]  h-full flex flex-col justify-center space-y-2">
-        <AudioControl />
-      </div>
-      <div class="w-[30%]  h-full flex items-center justify-end">
+      <AudioControl />
+      <div class="w-[20%]  h-full flex items-center justify-end">
         <div class="flex items-center gap-4 text-subdude">
           <Link href="/queue" class="hover:text-white">
             <QueueIcon />
