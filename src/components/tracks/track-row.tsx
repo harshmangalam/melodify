@@ -1,5 +1,8 @@
-import { component$, useSignal } from "@builder.io/qwik";
+import { $, component$, useOn, useSignal } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
+import { PauseIcon, PlayIcon } from "~/icons";
+import { PlayPauseButton } from "../player/play-pause-button";
+import { TrackPlay } from "./track-play";
 
 interface SongRowProps {
   sNo: number;
@@ -16,12 +19,30 @@ export const TrackRow = component$((props: SongRowProps) => {
     props;
   const hover = useSignal(false);
 
+  useOn(
+    "mouseenter",
+    $(() => {
+      hover.value = true;
+    })
+  );
+
+  useOn(
+    "mouseleave",
+    $(() => {
+      hover.value = false;
+    })
+  );
+
   return (
     <tr class="h-14  hover:bg-[hsla(0,0%,100%,.1)] transition duration-300">
       <td class="pl-2 rounded-l-md">
-        <div class="text-[#b3b3b3] h-4 w-4 inline-block">
-          <span class="font-normal">{sNo}</span>
-        </div>
+        {hover.value ? (
+          <TrackPlay />
+        ) : (
+          <div class="text-[#b3b3b3] h-4 w-4 inline-block">
+            <span class="font-normal">{sNo}</span>
+          </div>
+        )}
       </td>
       <td>
         <div class="flex items-center gap-4">
