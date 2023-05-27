@@ -1,12 +1,12 @@
 import { component$ } from "@builder.io/qwik";
 import { LibrarySearch } from "./library-search";
-import { SongsTable } from "~/components/tracks/tracks-table";
+import { TracksTable } from "~/components/tracks/track-table";
 
 export default component$(() => {
   return (
     <div>
       <LibrarySearch />
-      <SongsTable />
+      <TracksTable />
     </div>
   );
 });

@@ -2,7 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import { ClockIcon } from "~/icons";
 import { TrackRow } from "./track-row";
 
-export const SongsTable = component$(() => {
+export const TracksTable = component$(() => {
   return (
     <table class="w-full">
       <thead class="border-b border-[hsla(0,0%,100%,.1)]">
