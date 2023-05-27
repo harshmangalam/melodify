@@ -5,7 +5,7 @@ import { PlaylistCard } from "~/components/playlist/playlist-card";
 
 export default component$(() => {
   return (
-    <div class="px-6">
+    <div>
       <h2 class="mb-4 text-3xl font-bold text-white overflow-hidden text-ellipsis whitespace-nowrap">
         Good evening
       </h2>
