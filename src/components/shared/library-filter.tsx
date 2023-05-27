@@ -2,7 +2,7 @@ import { component$ } from "@builder.io/qwik";
 
 export const LibraryFilter = component$(() => {
   return (
-    <div class="my-2 mx-4 ">
+    <div>
       <div class="scroll-smooth flex items-center overflow-x-scroll">
         <button
           role="checkbox"
