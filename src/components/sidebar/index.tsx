@@ -43,9 +43,6 @@ export const Sidebar = component$(() => {
                 <PlusIcon />
               </button>
             </div>
-            <button class="p-2 hover:text-white">
-              <ArrowRightIcon />
-            </button>
           </header>
 
           <div class="my-2 mx-4 ">

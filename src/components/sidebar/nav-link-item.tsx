@@ -12,11 +12,11 @@ export const NavLinkItem = component$((props: NavLinkItemProps) => {
   const location = useLocation();
 
   return (
-    <li class="py-1 px-3">
+    <li>
       <Link
         href={href}
         class={[
-          "flex gap-5 text-[#b3b3b3] hover:text-white h-10",
+          "flex gap-5 text-[#b3b3b3] hover:text-white py-3 px-3",
           { "text-white": location.url.pathname === href },
         ]}
       >
