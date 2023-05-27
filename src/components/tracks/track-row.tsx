@@ -17,8 +17,8 @@ export const TrackRow = component$((props: SongRowProps) => {
   const hover = useSignal(false);
 
   return (
-    <tr>
-      <td>
+    <tr class="h-14  hover:bg-[hsla(0,0%,100%,.1)] transition duration-300">
+      <td class="pl-2 rounded-l-md">
         <div class="text-[#b3b3b3] h-4 w-4 inline-block">
           <span class="font-normal">{sNo}</span>
         </div>
@@ -39,10 +39,12 @@ export const TrackRow = component$((props: SongRowProps) => {
             </Link>
             <div class="text-sm text-[#b3b3b3] break-all">
               {artists.map((artist, i) => (
-                <Link key={artist.id} href={`/artist/${artist.id}`}>
-                  {artist.name}
-                  {artists.length < i + 1 ? ", " : ""}
-                </Link>
+                <span key={artist.id}>
+                  <Link href={`/artist/${artist.id}`} class="hover:underline">
+                    {artist.name}
+                  </Link>
+                  {artists.length > i + 1 ? ", " : ""}
+                </span>
               ))}
             </div>
           </div>
@@ -51,11 +53,13 @@ export const TrackRow = component$((props: SongRowProps) => {
 
       <td>
         <div class="text-[#b3b3b3] text-sm">
-          <Link href={`/album/${albumId}`}>{albumName}</Link>
+          <Link href={`/album/${albumId}`} class="hover:underline">
+            {albumName}
+          </Link>
         </div>
       </td>
-      <td>
-        <div class="text-[#b3b3b3] text-sm">{duration}</div>
+      <td class="rounded-r-md">
+        <div class="text-[#b3b3b3] text-sm pr-2">{duration}</div>
       </td>
     </tr>
   );

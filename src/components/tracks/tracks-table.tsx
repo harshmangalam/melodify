@@ -5,9 +5,9 @@ import { TrackRow } from "./track-row";
 export const SongsTable = component$(() => {
   return (
     <table class="w-full">
-      <thead>
+      <thead class="border-b border-[hsla(0,0%,100%,.1)]">
         <th>
-          <div class="flex justify-start"> #</div>
+          <div class="flex justify-start pl-2 py-2"> #</div>
         </th>
         <th>
           <div class="flex justify-start">Title</div>
@@ -16,7 +16,7 @@ export const SongsTable = component$(() => {
           <div class="flex justify-start">Album</div>
         </th>
         <th>
-          <div class="flex justify-start">
+          <div class="flex justify-start pr-2">
             <ClockIcon />
           </div>
         </th>
