@@ -22,7 +22,11 @@ export const PlayPauseButton = component$(
         ]}
         onClick$={() => (play.value = !play.value)}
       >
-        {play.value ? <PauseIcon /> : <PlayIcon />}
+        {play.value ? (
+          <PauseIcon size={size === "md" ? 18 : size === "xl" ? 20 : 16} />
+        ) : (
+          <PlayIcon size={size === "md" ? 18 : size === "xl" ? 20 : 16} />
+        )}
       </button>
     );
   }
