@@ -1,7 +1,5 @@
 import { $, component$, useOn, useSignal } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
-import { PauseIcon, PlayIcon } from "~/icons";
-import { PlayPauseButton } from "../player/play-pause-button";
 import { TrackPlay } from "./track-play";
 
 interface SongRowProps {
