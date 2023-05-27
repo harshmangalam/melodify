@@ -7,3 +7,4 @@ export * from "./arrow";
 export * from "./heart";
 export * from "./volume";
 export * from "./queue";
+export * from "./close";
