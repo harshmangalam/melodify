@@ -1,11 +1,12 @@
 import { component$ } from "@builder.io/qwik";
-import { Link } from "@builder.io/qwik-city";
+import { Link, useLocation } from "@builder.io/qwik-city";
 import { HeartOutlineIcon } from "~/icons/heart";
 import { Volume } from "../player/volume";
 import { QueueIcon } from "~/icons";
 import { AudioControl } from "../player/audio-control";
 
 export const Footer = component$(() => {
+  const location = useLocation();
   return (
     <footer class="col-span-12 flex items-center justify-between px-4 gap-4">
       <div class="flex items-center gap-4 w-[30%]">
@@ -48,8 +49,15 @@ export const Footer = component$(() => {
       </div>
       <AudioControl />
       <div class="w-[20%]  h-full flex items-center justify-end">
-        <div class="flex items-center gap-4 text-subdude">
-          <Link href="/queue" class="hover:text-white">
+        <div class="flex items-center gap-4">
+          <Link
+            href="/queue"
+            class={` ${
+              location.url.pathname === "/queue/"
+                ? "text-green-500 hover:text-[#1ed760]"
+                : "hover:text-white text-subdude"
+            }`}
+          >
             <QueueIcon />
           </Link>
           <Volume />
