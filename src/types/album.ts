@@ -8,5 +8,4 @@ export interface Album {
   };
   uri: string;
   genres: string[];
-  artists: Artist[];
 }
