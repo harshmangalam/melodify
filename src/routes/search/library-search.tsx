@@ -6,7 +6,7 @@ import { SearchInput } from "~/components/ui/search-input";
 export const LibrarySearch = component$(() => {
   const searchInput = useSignal("");
   return (
-    <header class="">
+    <header class="sticky top-0 bg-base">
       {/* search section  */}
       <section class="h-16 flex flex-col justify-center">
         <Form role="search" class="max-w-md w-full">
@@ -26,7 +26,7 @@ export const LibrarySearch = component$(() => {
 
       {/* filter section  */}
       {searchInput.value.length > 0 && (
-        <section>
+        <section class="pt-2 pb-4">
           <LibraryFilter />
         </section>
       )}
