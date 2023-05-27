@@ -6,7 +6,7 @@ import { SearchInput } from "~/components/ui/search-input";
 export const LibrarySearch = component$(() => {
   const searchInput = useSignal("");
   return (
-    <header class="sticky top-0 bg-base">
+    <header class=" bg-base">
       {/* search section  */}
       <section class="h-16 flex flex-col justify-center">
         <Form role="search" class="max-w-md w-full">
