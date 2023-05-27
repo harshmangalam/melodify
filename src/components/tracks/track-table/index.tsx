@@ -2,25 +2,31 @@ import { component$ } from "@builder.io/qwik";
 import { ClockIcon } from "~/icons";
 import { TrackRow } from "./track-row";
 
-export const TracksTable = component$(() => {
+interface TracksTableProps {
+  hideHeader?: boolean;
+}
+export const TracksTable = component$((props: TracksTableProps) => {
+  const { hideHeader = false } = props;
   return (
     <table class="w-full">
-      <thead class="border-b border-[hsla(0,0%,100%,.1)]">
-        <th>
-          <div class="flex justify-start pl-2 py-2"> #</div>
-        </th>
-        <th>
-          <div class="flex justify-start">Title</div>
-        </th>
-        <th>
-          <div class="flex justify-start">Album</div>
-        </th>
-        <th>
-          <div class="flex justify-start pr-2">
-            <ClockIcon />
-          </div>
-        </th>
-      </thead>
+      {!hideHeader && (
+        <thead class="border-b border-[hsla(0,0%,100%,.1)]">
+          <th>
+            <div class="flex justify-start pl-2 py-2"> #</div>
+          </th>
+          <th>
+            <div class="flex justify-start">Title</div>
+          </th>
+          <th>
+            <div class="flex justify-start">Album</div>
+          </th>
+          <th>
+            <div class="flex justify-start pr-2">
+              <ClockIcon />
+            </div>
+          </th>
+        </thead>
+      )}
       <tbody>
         {[...new Array(20)].map((track, i) => (
           <TrackRow
