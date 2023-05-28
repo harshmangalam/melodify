@@ -2,6 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import { GoogleAuth } from "../google-auth";
 import { GithubAuth } from "../github-auth";
 import { Form } from "@builder.io/qwik-city";
+import { Input } from "~/components/ui/input";
 
 export default component$(() => {
   return (
@@ -20,7 +21,9 @@ export default component$(() => {
       <hr class="border border-essential-subdude my-4" />
 
       <section>
-        <Form></Form>
+        <Form>
+          <Input label="What's your email?" placeholder="Enter your email." />
+        </Form>
       </section>
     </div>
   );
