@@ -10,3 +10,4 @@ export * from "./queue";
 export * from "./close";
 export * from "./time";
 export * from "./social-login";
+export * from "./alert";
