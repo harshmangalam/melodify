@@ -16,7 +16,7 @@ export const Input = component$((props: InputProps) => {
           {label}
         </label>
       )}
-      <input class="shadow-white rounded bg-base" {...inputProps} />
+      <input {...inputProps} class="shadow-white rounded bg-base form-input" />
       {error && (
         <p class="flex items-center gap-2 text-negative">
           <ErrorIcon />
