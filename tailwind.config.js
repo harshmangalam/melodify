@@ -6,7 +6,9 @@ module.exports = {
       colors:{
         "bright-accent":"#1ed760",
         "subdude":"#a7a7a7",
-        "essential-subdude":"#727272"
+        "essential-subdude":"#727272",
+        "essential-negative":"#e91429",
+        negative:"#f15e6c"
       },
       backgroundColor:{
         "base":"#121212",
