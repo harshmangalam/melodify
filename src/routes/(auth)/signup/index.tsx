@@ -3,6 +3,7 @@ import { GoogleAuth } from "../google-auth";
 import { GithubAuth } from "../github-auth";
 import { Form, Link } from "@builder.io/qwik-city";
 import { Input } from "~/components/ui/input";
+import { PhoneAuth } from "../phone-auth";
 
 export default component$(() => {
   return (
@@ -14,9 +15,7 @@ export default component$(() => {
       <section class="grid grid-cols-1 gap-2">
         <GoogleAuth />
         <GithubAuth />
-        <button class="flex space-x-6 border w-full border-essential-subdude rounded-full py-4 justify-center px-6 hover:border-white">
-          <span class="font-bold"> Continue with Phone Number</span>
-        </button>
+        <PhoneAuth />
       </section>
       <hr class="border border-essential-subdude my-4" />
 
@@ -58,6 +57,15 @@ export default component$(() => {
             Sign up
           </button>
         </Form>
+        <div class="mt-4 text-center">
+          <span class="text-subdude">Have an account ? </span>
+          <Link
+            href="/login"
+            class="hover:text-green-base-highlight hover:underline"
+          >
+            Log in
+          </Link>
+        </div>
       </section>
     </div>
   );
