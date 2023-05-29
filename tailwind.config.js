@@ -8,7 +8,9 @@ module.exports = {
         "subdude":"#a7a7a7",
         "essential-subdude":"#727272",
         "essential-negative":"#e91429",
-        negative:"#f15e6c"
+        negative:"#f15e6c",
+        "bright-accent":"#117a37",
+        "essential-bright-accent":"#169b45"
       },
       backgroundColor:{
         "base":"#121212",

@@ -8,15 +8,19 @@ type CustomProps = {
 };
 type InputProps = CustomProps & HTMLInputProps;
 export const Input = component$((props: InputProps) => {
-  const { label, error, ...inputProps } = props;
+  const { id, label, error, ...inputProps } = props;
   return (
     <div class="flex flex-col space-y-2">
       {label && (
-        <label for="email" class="text-sm font-bold">
+        <label for={id} class="text-sm font-bold">
           {label}
         </label>
       )}
-      <input {...inputProps} class="shadow-white rounded bg-base form-input" />
+      <input
+        id={id}
+        {...inputProps}
+        class="shadow-white rounded bg-base form-input"
+      />
       {error && (
         <p class="flex items-center gap-2 text-negative">
           <ErrorIcon />

@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import { GoogleAuth } from "../google-auth";
 import { GithubAuth } from "../github-auth";
-import { Form } from "@builder.io/qwik-city";
+import { Form, Link } from "@builder.io/qwik-city";
 import { Input } from "~/components/ui/input";
 
 export default component$(() => {
@@ -20,9 +20,43 @@ export default component$(() => {
       </section>
       <hr class="border border-essential-subdude my-4" />
 
-      <section>
-        <Form>
-          <Input label="What's your email?" placeholder="Enter your email." />
+      <section class="py-4">
+        <Form class="flex flex-col gap-4">
+          <div class="flex flex-col space-y-2">
+            <Input
+              name="email"
+              label="What's your email?"
+              placeholder="Enter your email."
+              id="email"
+            />
+            <Link
+              href="/login?method=phone"
+              class="text-essential-bright-accent text-[14px]"
+            >
+              Use phone number instead
+            </Link>
+          </div>
+          <Input
+            label="Create a password"
+            placeholder="Create a password."
+            type="password"
+            name="password"
+            id="password"
+          />
+          <Input
+            label="What should we call you?"
+            placeholder="Enter a profile name."
+            type="text"
+            name="name"
+            id="name"
+          />
+
+          <button
+            type="submit"
+            class="font-bold text-lg rounded-full bg-green-base hover:bg-green-base-highlight px-4 py-3  text-black hover:scale-105"
+          >
+            Sign up
+          </button>
         </Form>
       </section>
     </div>
