@@ -10,5 +10,7 @@ const account = new Account(client)
 export {
     client,
     account,
+    endpoint,
+    projectId
    
 }

@@ -4,19 +4,46 @@ import { GithubAuth } from "../github-auth";
 import { Form, Link, routeAction$, z, zod$ } from "@builder.io/qwik-city";
 import { Input } from "~/components/ui/input";
 import { PhoneAuth } from "../phone-auth";
-import { account } from "~/lib/appwrite-sdk";
-import { AppwriteException } from "appwrite";
-
+import { endpoint, projectId } from "~/lib/appwrite-sdk";
+import * as setCookie from "set-cookie-parser";
 export const useLogin = routeAction$(
-  async ({ email, password }, { redirect, fail }) => {
+  async ({ email, password }, { redirect, fail, cookie }) => {
     try {
-      await account.createEmailSession(email, password);
+      const body = JSON.stringify({
+        email,
+        password,
+      });
+      const response = await fetch(`${endpoint}/account/sessions/email`, {
+        method: "POST",
+        body,
+        headers: {
+          "X-Appwrite-Project": projectId,
+          "Content-Type": "application/json",
+        },
+      });
+      const data = await response.json();
+      if (data.code >= 400) {
+        return fail(400, { message: data.message });
+      }
+
+      const cookies = (response.headers.get("Set-Cookie") ?? "")?.split(",");
+
+      for (const c of cookies) {
+        const parsedCookie = setCookie.parseString(c);
+        cookie.set(parsedCookie.name, parsedCookie.value, {
+          domain: parsedCookie.domain,
+          secure: parsedCookie.secure,
+          sameSite: parsedCookie.sameSite as any,
+          path: parsedCookie.path,
+          maxAge: parsedCookie.maxAge,
+          httpOnly: parsedCookie.httpOnly,
+          expires: parsedCookie.expires,
+        });
+      }
+
       redirect(303, "/");
     } catch (error) {
-      if (error instanceof AppwriteException) {
-        console.log(error);
-        return fail(400, error.response as any);
-      }
+      console.log(error);
     }
   },
   zod$({

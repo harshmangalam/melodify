@@ -4,7 +4,7 @@ import { ErrorIcon } from "~/icons";
 type HTMLInputProps = QwikIntrinsicElements["input"];
 type CustomProps = {
   label?: string;
-  error?: string;
+  error?: string | string[];
 };
 type InputProps = CustomProps & HTMLInputProps;
 export const Input = component$((props: InputProps) => {
