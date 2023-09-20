@@ -4,20 +4,9 @@ import { GithubAuth } from "../github-auth";
 import { Form, Link, routeAction$, z, zod$ } from "@builder.io/qwik-city";
 import { Input } from "~/components/ui/input";
 import { PhoneAuth } from "../phone-auth";
-import { account } from "~/lib/appwrite-sdk";
-import { AppwriteException, ID } from "appwrite";
 
 export const useSignup = routeAction$(
-  async ({ email, name, password }, { redirect, fail }) => {
-    try {
-      await account.create(ID.unique(), email, password, name);
-      redirect(303, "/login");
-    } catch (error) {
-      if (error instanceof AppwriteException) {
-        return fail(400, error.response as any);
-      }
-    }
-  },
+  async ({ email, name, password }, { redirect, fail }) => {},
   zod$({
     name: z.string().nonempty("Enter a name for your profile."),
     email: z.string().email("You need to enter your email."),
